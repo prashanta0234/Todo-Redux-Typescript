@@ -25,7 +25,7 @@ export const newTodo = createAsyncThunk(
 );
 export const removeTodo = createAsyncThunk(
   "todo/removeTodo",
-  async (id: string) => {
+  async (id: number) => {
     const todo = await delateTodo(id);
     return todo;
   }
