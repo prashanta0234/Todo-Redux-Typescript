@@ -1,14 +1,14 @@
 {
   "todo": [
     {
-      "title": "Test 1",
+      "title": "Test one",
       "body": "Test todo 1 added!",
       "id": 1
     },
     {
-      "title": "Test Todo 2",
-      "body": "This is test todo 2!",
-      "id": 2
+      "title": "Test Three",
+      "body": "This is test three!",
+      "id": 3
     }
   ]
 }
