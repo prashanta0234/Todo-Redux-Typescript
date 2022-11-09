@@ -1,26 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
+
+import "./App.css";
+import Header from "./component/Header/Header";
+import Todo from "./component/Todo/Todo";
+import { AppDispatch, RootState } from "./rtk/app/Store";
+import { fetchTodo } from "./rtk/todo/todothunk";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const states = useSelector((state: RootState) => state.todos);
+	const { todo } = states;
+	const dispatch = useDispatch<AppDispatch>();
+	console.log(states);
+	React.useEffect(() => {
+		dispatch(fetchTodo());
+	}, [dispatch]);
+
+	return (
+		<>
+			<Header />
+			{todo?.map(item => (
+				<Todo key={item.id} todo={item} />
+			))}
+		</>
+	);
 }
 
 export default App;
