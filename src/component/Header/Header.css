@@ -5,4 +5,14 @@
 	margin: 0 8px;
 	border-radius: 8px;
 	padding: 4px;
+	width: 300px;
+	margin: 8px 0;
+}
+.btn-option {
+	border: none;
+	background: transparent;
+	cursor: pointer;
+}
+textarea {
+	min-height: 150px;
 }

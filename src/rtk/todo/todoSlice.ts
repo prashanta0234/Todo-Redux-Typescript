@@ -56,7 +56,7 @@ const todoSlice = createSlice({
 				state.error = "";
 				state.isError = false;
 				state.isLoding = false;
-				state.todo = state.todo.filter(t => t.id !== action.payload);
+				state.todo = state.todo.filter(t => t.id !== action.meta.arg);
 			})
 			.addCase(removeTodo.rejected, (state, action) => {
 				state.isError = true;
