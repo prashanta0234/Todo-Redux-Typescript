@@ -1,3 +1,9 @@
 {
-  "todo": []
+  "todo": [
+    {
+      "title": "Test TOdo",
+      "body": "This is test todo",
+      "id": 1
+    }
+  ]
 }

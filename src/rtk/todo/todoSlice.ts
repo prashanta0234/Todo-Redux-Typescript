@@ -40,7 +40,7 @@ const todoSlice = createSlice({
 				state.isLoding = false;
 				state.todo.push(action.payload);
 			})
-			.addCase(fetchTodo.rejected, (state, action) => {
+			.addCase(newTodo.rejected, (state, action) => {
 				state.isError = true;
 				state.isLoding = false;
 				state.todo = [];
